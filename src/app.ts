@@ -18,8 +18,15 @@ import router from "./router"
 //Logger
 import Logger from "../config/logger"
 
+//Middlewares
+    //Morgan Middlwware
+    import morganMiddlware from "./middleware/morganMiddleware"
+
     //Prefixo de url
-app.use("/api/", router)
+    app.use(morganMiddlware)
+
+ app.use("/api/", router)
+
 
 
 
