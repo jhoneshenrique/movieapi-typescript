@@ -15,6 +15,9 @@ import db from "../config/db"
 //Routes
 import router from "./router"
 
+//Logger
+import Logger from "../config/logger"
+
     //Prefixo de url
 app.use("/api/", router)
 
@@ -27,5 +30,5 @@ app.listen(3000, async() =>{
 
     await db();
 
-    console.log("Aplicação rodando na porta "+port)
+    Logger.info("Aplicação rodando na porta "+port)
 });
