@@ -28,8 +28,6 @@ import Logger from "../config/logger"
  app.use("/api/", router)
 
 
-
-
 // App port
 const port = config.get<number>("port");
 
